@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест функции isHappy</title>
+</head>
+<body>
+    <h1>Проверка функции isHappy</h1>
+    <input type="number" id="numberInput" placeholder="Введите число">
+    <button onclick="checkNumber()">Проверить число</button>
+    <p id="result"></p>
+
+    <script src="isHappy.js"></script>
+    <script>
+        function checkNumber() {
+            const number = document.getElementById('numberInput').value;
+            const isNumberHappy = isHappy(parseInt(number, 10));
+            document.getElementById('result').textContent = isNumberHappy ? "Число счастливое!" : "Число не счастливое.";
+        }
+    </script>
+   <h1>Проверка типа Push</h1>
+   <button onclick="showExtendedArray()">Показать расширенный массив</button>
+   <p id="result"></p>
+
+   <script src="lab3.js"></script>
+   <script>
+       function showExtendedArray() {
+           // Этот код демонстрирует использование типа из TypeScript после компиляции в JavaScript
+           const resultElement = document.getElementById('result');
+           resultElement.textContent = `Расширенный массив: ${exampleArray.join(', ')}`;
+       }
+   </script>
+</body>
+</html>
